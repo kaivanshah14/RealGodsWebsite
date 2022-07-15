@@ -1,0 +1,50 @@
+body {
+  background: rgb(0, 0, 0, 1);
+  background-image: url(../Logos/output-onlinepngtools.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 30%;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 2% auto;
+}
+
+.home img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+
+.icons {
+  margin-left: 43%;
+}
+
+.twitter,
+.discord,
+.instagram {
+  background: none;
+  padding: 10px;
+}
+
+.twitter:hover,
+.discord:hover,
+.instagram:hover {
+  opacity: 0.7;
+}
+
+/* .fa, .fab{
+  padding: 10px 12px;
+  border-radius: 3px;
+  font-size: 20px;
+  color: white;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.fa:hover,.fab:hover {
+  opacity: 0.8;
+} */
