@@ -1,0 +1,6 @@
+RG Website Ideas
+1. Create a Services page. Include Discord Management, Lineup Management, Tournament Management, Coaching, Graphic Designing, Streaming, Casting under it.
+2. Create a Tournaments page. Include all past tournaments, prizepools, number of registrations, number of players, number of views, or any other stats. All past tournament brand/sponsor logos can be shown as a marquee, rotating on the page.
+3. Create a Testimonals page. Take testimonials from Brands, Content Creators, Players, Esports Team Owners, etc... and showcase on the website.
+4. Create a careers page to recruit new staff.
+5. Create a Achievements page to showcase Lineup Achievements. (Optional)
