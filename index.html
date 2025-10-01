@@ -1,62 +1,327 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="CSS/style.css" />
-  <link rel="stylesheet" href="CSS/indexstyle.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Welcome to Real Gods Clan. Real Gods is a Gaming Clan for games like Call of Duty Mobile, Bullet Force, Valorant, Clash Royale, Clash of Clans and much more. This is the reign of 'Real Gods' watch your step before you land here, we rule the Gaming World.">
-  <meta name="keywords"
-    content="Real Gods, Real Gods Clan, Call pf Duty Mobile, Call of Duty Mobile Clan, Clan, Gaming Clan, CODM Clan, CoD Mobile Clan, CODM India, Call of Duty Mobile India, Clash Royale Clan, Clash of Clans, Valorant, Valorant India, Valorant Clan">
-  <meta name="author" content="Kaivan Shah">
-  <meta name="publisher" content="Real Gods Clan">
-  <title>Real Gods Clan - Gaming Clan India</title>
-  <link rel="icon" type="image/jpg" href="Logos/RG Logo Green bg.jpg" />
+  <title>Real Gods Esports</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/nav.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="CSS/theme.css" />
 </head>
 
 <body>
-  <nav>
-    <div class="home">Real Gods Clan</div>
-    <input type="checkbox" id="click" />
-    <label for="click" class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </label>
-    <ul class="snip1217">
-      <li><a class="current" href="index.html">Home</a></li>
-      <!-- <li><a href="aboutus.html">About Us</a></li> -->
-      <li><a href="scrims.html">Scrims</a></li>
-      <!-- <li><a href="joinus.html">Join Us</a></li> -->
-      <li><a href="socials.html">Socials</a></li>
-    </ul>
-  </nav>
-  <div class="dark fire">
-    <h1 data-heading="RealGodsClan" class="Blazing">Real Gods Clan</h1>
-  </div>
-  <h2> We humbly welcome you to the reign of Real Gods, the realm of Gamers</h2>
-  <div class="flex-container">
+  <!-- Navigation -->
+  <header>
+    <nav class="nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="RG Logo" />
+        <span>Real Gods Esports</span>
+      </div>
 
-    <div class="flex-child">
-      <span class="flex-text">Who are we?</span>
-      <p>Real Gods Clan also known as RG is a gaming clan which was established
-        in May 2019. We are an International Mobile Gaming Clan which includes
-        games such as Valorant and Call of Duty Mobile.</p>
+      <!-- Mobile nav toggle -->
+      <button id="nav-toggle" aria-expanded="false">☰</button>
+      <!-- Dark/Light mode toggle -->
+      <!-- <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button> -->
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#tournaments">Tournaments</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero container" id="home">
+    <div class="hero-slider">
+      <!-- Slide 1 -->
+      <div class="slide active" style="background-image: url('assets/hero/hero1.jpg')">
+        <div class="hero-overlay">
+          <div class="container hero-inner">
+            <div class="hero-left">
+              <h1>Real Gods Esports</h1>
+              <p>Building Indian Esports since 2019 — Valorant, Call of Duty Mobile & community tournaments.</p>
+              <div class="hero-buttons">
+                <a class="btn btn-primary" href="#tournaments">View Tournaments</a>
+                <a class="btn btn-ghost" href="#about">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide" style="background-image: url('assets/hero/hero2.jpg')">
+        <div class="hero-overlay">
+          <div class="container hero-inner">
+            <div class="hero-left">
+              <h1>We are Hiring</h1>
+              <p>We are looking for experienced professionals excited to make their career in Esports</p>
+              <div class="hero-buttons">
+                <a class="btn btn-primary" href="#tournaments">Register</a>
+                <a class="btn btn-ghost" href="#community">Join Community</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide" style="background-image: url('assets/hero/hero3.jpg')">
+        <div class="hero-overlay">
+          <div class="container hero-inner">
+            <div class="hero-left">
+              <h1>Real Gods Esports x Valorant</h1>
+              <p>Catch us in Valorant, #RGOnTop</p>
+              <div class="hero-buttons">
+                <a class="btn btn-primary" href="#tournaments">Register</a>
+                <a class="btn btn-ghost" href="#community">Join Community</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TODO: Add more slides by duplicating -->
     </div>
 
-    <div class="flex-child">
-      <span class="flex-text">What do we do?</span>
-      <p>We are a clan, a tournament organization, a team and a community
-        of gamers from all over the world. We at Real Gods Clan provide
-        the best management and the perfect gaming experience for gamers.
-      </p>
-    </div>
+    <!-- Stat Cards (always visible) -->
+    <!-- <div class="hero-stats">
+      <div class="card stat-card">Discord<br /><strong>2.8k+</strong></div>
+      <div class="card stat-card">Prize Pools<br /><strong>₹15,000+</strong></div>
+      <div class="card stat-card">Since<br /><strong>2019</strong></div>
+    </div> -->
 
-  </div>
-  <div class="content2">
-    <footer>&copy; 2021 by Kaivan Shah</footer>
-  </div>
+    <!-- Dots Navigation -->
+    <div class="hero-dots"></div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>
+      Real Gods Esports is an Indian Esports Team & Tournament Organization for THE FINALS, Valorant and Call of Duty
+      Mobile. Established in May 2019, we have focused on creating a community of gaming enthusiasts with one goal - to
+      bring gamers worldwide under one roof to encourage the upcoming talent in the Esports field. We have created more
+      than 50+ teams for various games and have hosted 5 major public tournaments. We currently host a staff team with
+      more than 25 members working in different domains to ensure the upbringing of the Organization.
+      We have a Discord community of more than 2800+ members and are continuously growing. We have a dedicated team for
+      content creation, social media management, and marketing to ensure the best experience for our community members.
+    </p>
+    <p>
+      <strong>Our Vision:</strong> Our vision is to create a space where talent is nurtured, gaming skills are
+      respected, and members of the organization are recognized throughout the Indian gaming community. A place where
+      gamers lead, manage, organize, thrive, and grow together as part of RG. We wish to make RG an organization for
+      those passionate about gaming as players, content creators, community managers, team leaders, or community
+      members.
+    </p>
+    <!-- TODO: Add more story, timeline, leadership details -->
+  </section>
+
+  <section id="tournaments">
+    <div class="container">
+      <h2>Tournaments</h2>
+
+      <!-- Overall Stats FIRST -->
+      <div class="tournament-stats">
+
+        <!-- Tournaments Hosted -->
+        <div class="stat">
+          <img src="assets/icons/trophy.png" alt="Tournaments Hosted" width="50">
+          <h3 class="counter" data-target="6">0</h3>
+          <p>Tournaments Hosted</p>
+        </div>
+
+        <!-- Total Prizepool -->
+        <div class="stat">
+          <img src="assets/icons/dollar.png" alt="Total Prizepool" width="50">
+          <h3 class="counter" data-target="54000">0</h3>
+          <p>Total Prizepool (₹)</p>
+        </div>
+
+        <!-- Total Participants -->
+        <div class="stat">
+          <img src="assets/icons/gamer.png" alt="Participants" width="50">
+          <h3 class="counter" data-target="5970">0</h3>
+          <p>Total Participants</p>
+        </div>
+
+        <!-- YouTube Views -->
+        <div class="stat">
+          <img src="assets/icons/youtube.png" alt="YouTube Views" width="50">
+          <h3 class="counter" data-target="975">0</h3>
+          <p>YouTube Views</p>
+        </div>
+
+        <!-- Instagram Views -->
+        <div class="stat">
+          <img src="assets/icons/instagram.png" alt="Instagram Views" width="50">
+          <h3 class="counter" data-target="4836">0</h3>
+          <p>Instagram Views</p>
+        </div>
+
+        <div class="stat">
+          <img src="assets/icons/discord.png" alt="Discord Views" width="50">
+          <h3 class="counter" data-target="2829">0</h3>
+          <p>Discord Members</p>
+        </div>
+      </div>
+
+      <!-- Tournament Grid -->
+      <div class="grid tournaments-grid">
+        <!-- Tournament 1 -->
+        <div class="tournament-card">
+          <img src="assets/tournament/tournament_image_1.jpg" alt="RG Multiplayer League">
+          <div class="tournament-info">
+            <h3>Multiplayer League S1</h3>
+            <p><strong>Game:</strong> Call of Duty Mobile (CODM)</p>
+            <p><strong>Prizepool:</strong> ₹3,000</p>
+            <p><strong>Teams:</strong> 32 | <strong>Participants:</strong> 192</p>
+            <p><strong>Sponsor:</strong> <a href="#" class="sponsor-link">ESM</a></p>
+          </div>
+        </div>
+
+        <!-- Tournament 2 -->
+        <div class="tournament-card">
+          <img src="assets/tournament/tournament_image_2.jpg" alt="Battle Royale 1">
+          <div class="tournament-info">
+            <h3>Battle Royale Tournament 1</h3>
+            <p><strong>Game:</strong> Call of Duty Mobile (CODM)</p>
+            <p><strong>Prizepool:</strong> ₹2,500</p>
+            <p><strong>Teams:</strong> 32 | <strong>Participants:</strong> 192</p>
+            <p><strong>Sponsor:</strong> <a href="https://game.tv/" target="_blank" class="sponsor-link">Game.tv</a></p>
+          </div>
+        </div>
+
+        <!-- Tournament 3 -->
+        <div class="tournament-card">
+          <img src="assets/tournament/tournament_image_3.jpg" alt="Battle Royale 2">
+          <div class="tournament-info">
+            <h3>Battle Royale Tournament 2</h3>
+            <p><strong>Game:</strong> Call of Duty Mobile (CODM)</p>
+            <p><strong>Prizepool:</strong> ₹40,000</p>
+            <p><strong>Participants:</strong> 5312 | <strong>Lobbies:</strong> 52</p>
+            <p><strong>Sponsor:</strong> <a href="https://game.tv/" target="_blank" class="sponsor-link">Game.tv</a></p>
+          </div>
+        </div>
+
+        <!-- Tournament 4 -->
+        <div class="tournament-card">
+          <img src="assets/tournament/tournament_image_4.jpg" alt="Valorant S1">
+          <div class="tournament-info">
+            <h3>Valorant Tournament S1</h3>
+            <p><strong>Game:</strong> Valorant</p>
+            <p><strong>Prizepool:</strong> ₹5,000</p>
+            <p><strong>Teams:</strong> 32 | <strong>Participants:</strong> 192</p>
+            <p><strong>Sponsor:</strong> <a href="#" class="sponsor-link">Al Fayez Esports</a></p>
+          </div>
+        </div>
+
+        <!-- Tournament 5 -->
+        <div class="tournament-card">
+          <img src="assets/tournament/tournament_image_5.jpg" alt="Clan Bash TDM">
+          <div class="tournament-info">
+            <h3>Clan Bash TDM</h3>
+            <p><strong>Game:</strong> Valorant</p>
+            <p><strong>Prizepool:</strong> ₹2,500</p>
+            <p><strong>Teams:</strong> 15 | <strong>Participants:</strong> 75</p>
+            <p><strong>Sponsor:</strong> <a href="https://indigg.gg/" target="_blank" class="sponsor-link">IndiGG</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Tournament 6 -->
+        <div class="tournament-card">
+          <img src="assets/tournament/tournament_image_6.jpg" alt="Valorant Tournament S2">
+          <div class="tournament-info">
+            <h3>Valorant Tournament S2</h3>
+            <p><strong>Game:</strong> Valorant</p>
+            <p><strong>Prizepool:</strong> ₹1,600</p>
+            <p><strong>Teams:</strong> 8 | <strong>Participants:</strong> 40</p>
+            <p><strong>Sponsor:</strong> <a href="https://thefedr8tion.com/" target="_blank"
+                class="sponsor-link">Federation</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="container">
+    <h2>Our Services</h2>
+    <p class="subtitle">From community management to coaching, we provide professional esports services.</p>
+
+    <div class="services-grid">
+      <!-- Example Flip Card -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- Front -->
+          <div class="flip-card-front">
+            <img src="assets/icons/discord.png" alt="Discord Management" width="60">
+            <h3>Discord Management</h3>
+          </div>
+          <!-- Back -->
+          <div class="flip-card-back">
+            <p>We manage your Discord community: moderation, events, and engagement to grow your audience.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate for other services -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="assets/icons/lineup.png" alt="Lineup Management" width="60">
+            <h3>Lineup Management</h3>
+          </div>
+          <div class="flip-card-back">
+            <p>Organize your teams, track rosters, and schedule matches efficiently with our lineup management services.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more cards: Tournament Management, Coaching, Graphic Designing, Streaming, Casting -->
+    </div>
+  </section>
+
+
+  <!-- Media Section -->
+  <section id="media" class="container">
+    <h2>Media</h2>
+    <div class="grid">
+      <div class="card">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/w1YZSg7HiyE" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <div class="card">
+        <img src="assets/media/instagram-sample.jpg" alt="Instagram Post" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <p>For collaborations, sponsorships, and partnerships, reach out:</p>
+    <p>Email: <a href="mailto:contact@realgodsesports.com">contact@realgodsesports.com</a></p>
+    <p>Discord: <a href="https://discord.gg/yourlink" target="_blank">Join Here</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Real Gods Esports. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="JS/main.js"></script>
 </body>
 
 </html>

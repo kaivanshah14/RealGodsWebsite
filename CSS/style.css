@@ -1,165 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* ========================
+   General Layout Styles
+   ======================== */
 
+/* Reset / Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
-nav {
-  display: flex;
-  height: 80px;
-  width: 100%;
-  background: #000000;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px 0 100px;
-  flex-wrap: wrap;
+html {
+  scroll-behavior: smooth;
 }
 
-nav .home {
-
-  font-size: 35px;
-  font-weight: 600;
-  background-image: url(https://img1.picmix.com/output/stamp/normal/4/7/7/6/1196774_ef799.gif);
-  /* background-image: url(https://media.giphy.com/media/tj5v01sQumzCg/giphy.gif ); */
-  background-size: cover;
-  color: transparent;
-  background-clip: text;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  line-height: .75;
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--color-bg, #0a0a0a);
+  color: var(--color-text, #fff);
 }
 
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
+/* Utility classes */
+.muted {
+  color: var(--color-muted, #aaa);
+  font-size: 0.9rem;
 }
 
-nav ul li {
-  display: inline-block;
-  list-style: outside none none;
-  margin: 0.5em 1.5em;
-  padding: 0;
+img {
+  max-width: 100%;
+  border-radius: var(--radius, 12px);
 }
 
-nav ul li a {
-  display: inline-block;
-  position: relative;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
+section {
+  padding: 60px 0;
 }
 
-nav ul li a.current {
-  color: rgb(190, 254, 0);
+h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
 }
 
-nav ul li a:before,
-nav ul li a:after {
-  height: 3px;
-  position: absolute;
-  content: '';
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-  background-color: rgb(190, 254, 0);
-  width: 0;
-}
-
-nav ul li a:before {
-  top: 0;
-  left: 0;
-}
-
-nav ul li a:after {
-  bottom: 0;
-  right: 0;
-}
-
-nav ul li a:hover,
-nav ul li .current a {
-  color: rgb(255, 255, 255);
-}
-
-nav ul li a:hover:before,
-nav ul li .current a:before,
-nav ul li a:hover:after,
-nav ul li .current a:after {
-  width: 100%;
-}
-
-nav .menu-btn i {
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
-  display: none;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
-
-@media (max-width: 750px) {
-  nav .menu-btn i {
-    display: block;
-  }
-
-  /**For tabbing through the page**/
-  #click:checked~.menu-btn i:before {
-    content: "\f00d";
-  }
-
-  nav ul {
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: #111;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block;
-  }
-
-  #click:checked~ul {
-    left: 0;
-  }
-
-  nav ul li {
-    width: 100%;
-    margin: 30px 0;
-  }
-
-  nav ul li a {
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-  }
-
-  #click:checked~ul li a {
-    margin-left: 0px;
-  }
-
-  nav ul li a.current,
-  nav ul li a:hover {
-    background: none;
-    color: rgb(190, 254, 0);
-    text-shadow: none;
-  }
-
-  nav ul li a:hover:before,
-  nav ul li .current a:before,
-  nav ul li a:hover:after,
-  nav ul li .current a:after {
-    width: 0%;
-  }
+p {
+  margin-bottom: 12px;
+  line-height: 1.6;
 }
