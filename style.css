@@ -686,3 +686,14 @@ body {
     text-align: center; color: var(--color-muted);
     font-size: .98rem; margin-top: 20px;
 }
+/* Remove default underline for all links inside contact section */
+#contact a {
+    text-decoration: none;
+}
+
+/* Optional: keep hover highlight only */
+#contact a:hover {
+    text-decoration: none;
+    color: var(--color-primary); /* green glow */
+}
+
