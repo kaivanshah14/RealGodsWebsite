@@ -3,9 +3,460 @@
   --color-text: #ffffff;
   --color-muted: #aaa;
   --color-primary: #00ff88;
-  --color-card-bg: #111;      /* card backgrounds */
-  --color-card-text: #fff;    /* card text */
+  --color-card-bg: #111; /* card backgrounds */
+  --color-card-text: #fff; /* card text */
   --radius: 12px;
+}
+
+/* Layout Containers */
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #00cc6a;
+}
+
+.btn-ghost {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-ghost:hover {
+  background: var(--color-primary);
+  color: #000;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: var(--color-text);
+}
+
+.hero-slider {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide-bg {
+  display: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.hero-left {
+  max-width: 600px;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.hero-left p {
+  font-size: 1.2rem;
+  color: #fff;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Floating stat cards */
+.hero-stats {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  z-index: 3;
+}
+
+.stat-card {
+  background: rgba(0,0,0,0.65);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  border: 1px solid var(--color-primary);
+}
+
+/* Sections */
+section {
+  padding: 50px 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+/* Tournaments Section */
+.tournaments-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.tournament-card {
+  background: var(--color-card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--color-card-text);
+}
+
+.tournament-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+}
+
+.tournament-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tournament-info h3 {
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.tournament-info p {
+  font-size: 0.95rem;
+  margin: 4px 0;
+}
+
+.tournament-info a,
+.sponsor-link {
+  color: var(--color-card-text);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.tournament-info a:hover,
+.sponsor-link:hover {
+  color: var(--color-primary);
+}
+
+/* Stats section */
+.tournament-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tournament-stats .stat {
+  text-align: center;
+}
+
+.tournament-stats .stat img {
+  display: block;
+  margin: 0 auto 8px auto;
+}
+
+.tournament-stats .stat h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+/* Grid for tournaments/media/services */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background: var(--color-card-bg);
+  padding: 12px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  color: var(--color-card-text);
+}
+
+.card img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.muted {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+/* Footer */
+footer {
+  background: var(--color-card-bg);
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid var(--color-primary);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+  }
+
+  .hero-stats {
+    bottom: 20px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stats {
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+  }
+
+  .stat-card {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+/* Hero Dots */
+.hero-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.hero-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-dots button.active {
+  background: var(--color-primary);
+  transform: scale(1.2);
+}
+
+/* Hamburger / Nav */
+#nav-toggle {
+  display: none;
+  background: var(--color-bg);
+  border: none;
+  font-size: 2rem;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #nav-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--color-card-bg);
+    padding: 20px;
+    border-radius: var(--radius);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    z-index: 10;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-bg);
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+/* Nav link hover */
+nav ul li a {
+  position: relative;
+  padding: 8px 12px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li a::before { top: 0; transform-origin: right; }
+nav ul li a::after { bottom: 0; transform-origin: left; }
+
+nav ul li a:hover::before,
+nav ul li a:hover::after { transform: scaleX(1); }
+nav ul li a:hover { color: var(--color-primary); }
+
+/* Services / Flip cards */
+.services-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 40px;
+}
+
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.flip-card-front {
+  background-color: var(--color-card-bg);
+  color: var(--color-primary);
+}
+
+.flip-card-back {
+  background-color: var(--color-card-bg);
+  color: var(--color-card-text);
+  transform: rotateY(180deg);
 }
 
 /* Light theme overrides */
@@ -18,20 +469,17 @@ body.light-theme {
   --color-card-text: #111111;
 }
 
+/* Nav adapts automatically because it uses CSS variables */
+header, .nav-links li a, #theme-toggle {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
 /* Smooth color transition */
 body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* Nav adapts automatically because it uses CSS variables */
-header,
-.nav-links li a,
-#theme-toggle {
-  background: var(--color-bg);
-  color: var(--color-text);
-}
-
-/* Theme toggle button */
 #theme-toggle {
   background: transparent;
   border: none;
@@ -42,6 +490,7 @@ header,
   margin-left: 10px;
   transition: transform 0.2s ease;
 }
+
 #theme-toggle:hover {
   transform: scale(1.2);
 }
