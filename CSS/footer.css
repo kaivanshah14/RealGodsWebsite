@@ -2,20 +2,20 @@
    Footer Styles
    ======================== */
 
-   footer {
-    text-align: center;
-    background: #111;
-    padding: 30px 10px;
-    color: var(--color-muted, #aaa);
-    font-size: 0.9rem;
-  }
-  
-  footer a {
-    color: var(--color-primary, #00ff88);
-    margin: 0 6px;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
+footer {
+  background: var(--color-card-bg);
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid var(--color-primary);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+footer a {
+  color: var(--color-primary, #00ff88);
+  margin: 0 6px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

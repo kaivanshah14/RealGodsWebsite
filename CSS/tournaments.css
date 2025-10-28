@@ -1,0 +1,75 @@
+/* Tournaments Section */
+
+.tournaments-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.tournament-card {
+  background: var(--color-card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--color-card-text);
+}
+
+.tournament-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+}
+
+.tournament-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tournament-info h3 {
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.tournament-info p {
+  font-size: 0.95rem;
+  margin: 4px 0;
+}
+
+.tournament-info a,
+.sponsor-link {
+  color: var(--color-card-text);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.tournament-info a:hover,
+.sponsor-link:hover {
+  color: var(--color-primary);
+}
+
+/* Stats section */
+.tournament-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tournament-stats .stat {
+  text-align: center;
+}
+
+.tournament-stats .stat img {
+  display: block;
+  margin: 0 auto 8px auto;
+}
+
+.tournament-stats .stat h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}

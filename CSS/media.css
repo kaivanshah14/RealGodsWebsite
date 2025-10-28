@@ -1,0 +1,19 @@
+/* Grid for media */
+.media-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.media-card {
+  background: var(--color-card-bg);
+  padding: 12px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  color: var(--color-card-text);
+}
+
+.media-card img {
+  width: 100%;
+  border-radius: var(--radius);
+}

@@ -2,50 +2,125 @@
    Navigation Styles
    ======================== */
 
-   .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
-    position: relative;
+/* Nav link hover */
+nav ul li a {
+  position: relative;
+  padding: 8px 12px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li a::before {
+  top: 0;
+  transform-origin: right;
+}
+
+nav ul li a::after {
+  bottom: 0;
+  transform-origin: left;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+nav ul li a:hover {
+  color: var(--color-primary);
+}
+
+/* Nav Container Styling*/
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.nav .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--color-primary, #00ff88);
+}
+
+.nav .brand img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: var(--color-text, #fff);
+  font-weight: 500;
+  padding: 6px 8px;
+  border-radius: var(--radius, 12px);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.nav-links li a:hover {
+  background: rgba(0, 255, 136, 0.1);
+  color: var(--color-primary, #00ff88);
+}
+
+.nav-ctas {
+  display: flex;
+  gap: 10px;
+}
+
+/* Hamburger / Menu */
+#nav-toggle {
+  display: none;
+  background: var(--color-bg);
+  border: none;
+  font-size: 2rem;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  #nav-toggle {
+    display: block;
   }
-  
-  .nav .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--color-primary, #00ff88);
-  }
-  
-  .nav .brand img {
-    height: 40px;
-    width: auto;
-  }
-  
+
   .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--color-card-bg);
+    padding: 20px;
+    border-radius: var(--radius);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    z-index: 10;
+  }
+
+  .nav-links.open {
     display: flex;
-    gap: 20px;
-    list-style: none;
   }
-  
-  .nav-links li a {
-    color: var(--color-text, #fff);
-    font-weight: 500;
-    padding: 6px 8px;
-    border-radius: var(--radius, 12px);
-    transition: color 0.2s ease, background 0.2s ease;
-  }
-  
-  .nav-links li a:hover {
-    background: rgba(0, 255, 136, 0.1);
-    color: var(--color-primary, #00ff88);
-  }
-  
-  .nav-ctas {
-    display: flex;
-    gap: 10px;
-  }
-  
+}
