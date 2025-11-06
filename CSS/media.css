@@ -1,19 +1,93 @@
-/* Grid for media */
-.media-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+/* Media Section */
+#media {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--color-bg, #0a0a0a);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#media h2 {
+    color: var(--color-primary, #00ff88);
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0 0 8px var(--color-primary, #00ff8850);
+}
+
+/* Grid layout (for both YouTube + Insta) */
+.media-grid,
+.media-grid-insta {
+    display: flex;
+    flex-wrap: nowrap; /* ✅ keeps all in one horizontal row */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    overflow-x: auto; /* ✅ horizontal scroll for small screens */
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+/* Card container */
+.media-card,
+.media-card-insta {
+    background: var(--color-card-bg, #f8f8f8);
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.15);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    max-width: 540px;
+    flex: 0 0 540px; /* ✅ consistent width for horizontal flow */
+    scroll-snap-align: start;
 }
 
 .media-card {
-  background: var(--color-card-bg);
-  padding: 12px;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  color: var(--color-card-text);
+    height: 350px;
 }
 
-.media-card img {
-  width: 100%;
-  border-radius: var(--radius);
+.media-card-insta {
+    height: 405px;
+}
+
+/* Hover effects */
+.media-card:hover,
+.media-card-insta:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 20px var(--color-primary, rgba(0, 255, 136, 0.4));
+}
+
+/* For videos and embeds */
+.media-card iframe,
+.media-card-insta blockquote {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+/* ===============================
+   Light & Dark Mode Balancing
+=================================*/
+@media (prefers-color-scheme: light) {
+    #media {
+        background: #f4f4f4 !important;
+    }
+
+    .media-card,
+    .media-card-insta {
+        background: #fff !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .instagram-media {
+        background: #fff !important;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    #media h2 {
+        color: #009f5f;
+        text-shadow: none;
+    }
 }
