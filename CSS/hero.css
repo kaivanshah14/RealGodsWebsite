@@ -138,38 +138,3 @@
   background: var(--color-primary);
   color: #000;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-left h1 {
-    font-size: 2rem;
-  }
-
-  .hero-left p {
-    font-size: 1rem;
-  }
-
-  .hero-stats {
-    bottom: 20px;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-stats {
-    flex-direction: column;
-    align-items: left;
-    gap: 10px;
-  }
-
-  .stat-card {
-    width: 80%;
-    text-align: center;
-  }
-}
