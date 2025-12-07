@@ -30,11 +30,13 @@
   color: var(--color-primary);
   margin-bottom: 8px;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .tournament-info p {
   font-size: 0.95rem;
   margin: 4px 0;
+  text-align: center;
 }
 
 .tournament-info a,
