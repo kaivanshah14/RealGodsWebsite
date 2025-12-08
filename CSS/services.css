@@ -80,7 +80,8 @@
   font-size: 1.3rem;
   margin-bottom: 12px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 650;
+  text-shadow: 0 0 10px color-mix(in srgb, var(--color-primary), transparent 70%);
 }
 
 .service-card p {
