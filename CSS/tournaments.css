@@ -50,6 +50,10 @@
   color: var(--color-primary);
 }
 
+.tournament-info {
+  padding-left:10px;
+}
+
 /* Stats section */
 .tournament-stats {
   display: flex;
