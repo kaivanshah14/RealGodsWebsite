@@ -8,10 +8,8 @@
 
 #media h2 {
   color: var(--color-primary, #00ff88);
-  font-size: 2rem;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
-  text-transform: uppercase;
+  
+    margin-bottom: 30px;
   font-weight: 700;
 }
 
@@ -23,7 +21,6 @@
   padding: 27px;
   justify-items: center;
   align-items: center;
-  align:content: center;
 }
 
 /* 100% responsive for all devices */
