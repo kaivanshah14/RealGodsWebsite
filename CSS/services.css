@@ -11,7 +11,6 @@
 #services h2 {
   color: var(--color-primary);
   font-size: 2.4rem;
-  text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 1.5px;
   text-shadow: 0 0 10px color-mix(in srgb, var(--color-primary), transparent 70%);
@@ -77,19 +76,16 @@
 /* Text Styles */
 .service-card h3 {
   color: var(--color-primary);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: 12px;
-  text-transform: uppercase;
   font-weight: 650;
   text-shadow: 0 0 10px color-mix(in srgb, var(--color-primary), transparent 70%);
 }
 
 .service-card p {
   color: var(--color-card-text);
-  opacity: 0.9;
   font-size: 0.95rem;
-  line-height: 1.6;
-  text-align: justify;
+  line-height: 1.75;
 }
 
 /* RESPONSIVE */

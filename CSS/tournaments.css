@@ -29,11 +29,10 @@
 .tournament-info h3 {
   color: var(--color-primary);
   margin-bottom: 8px;
-  font-size: 1.2rem;
 }
 
 .tournament-info p {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   margin: 4px 0;
 }
 
@@ -51,7 +50,7 @@
 }
 
 .tournament-info {
-  padding-left:10px;
+  padding-left:7px;
 }
 
 /* Stats section */
@@ -74,6 +73,6 @@
 
 .tournament-stats .stat h3 {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--color-primary);
 }
