@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ========================
+// ========================
 // Dark / Light Mode Toggle
 // ========================
 const themeToggle = document.getElementById("theme-toggle");
@@ -142,3 +142,35 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 });
+
+console.log("hero js loaded");
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  let currentSize = '';
+
+  function updateHeroImages() {
+    const w = window.innerWidth;
+
+    const size =
+      w <= 768 ? 'sm' :
+      w <= 1366 ? 'md' :
+      'lg';
+
+    if (size === currentSize) return;
+    currentSize = size;
+
+    document.querySelectorAll('.slide').forEach(slide => {
+      const base = slide.dataset.base;
+      if (!base) return;
+
+      slide.style.backgroundImage =
+        `url('${base}-${size}.png')`;
+    });
+  }
+
+  updateHeroImages();
+  window.addEventListener('resize', updateHeroImages);
+
+});
+
