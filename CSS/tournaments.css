@@ -38,7 +38,7 @@
 
 .tournament-info a,
 .sponsor-link {
-  color: var(--color-card-text);
+  color: var(--color-card-text);  
   font-weight: 600;
   text-decoration: underline;
   transition: color 0.3s ease;
