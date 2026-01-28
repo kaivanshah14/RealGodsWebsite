@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ========================
+// ========================
 // Dark / Light Mode Toggle
 // ========================
 const themeToggle = document.getElementById("theme-toggle");
@@ -142,3 +142,37 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 });
+
+// ========================
+// Responsive Hero Images
+// ========================
+
+document.addEventListener('DOMContentLoaded', () => { // Ensure DOM is loaded before running script
+
+  let currentSize = ''; // Track current size to avoid unnecessary updates in the sizes
+
+  function updateHeroImages() { // Function to get the window size and update images accordingly
+    const w = window.innerWidth;
+
+    const size = // Determine size category based on width
+      w <= 768 ? 'sm' :
+      w <= 1366 ? 'md' :
+      'lg';
+
+    if (size === currentSize) return; // No change in size category, skip update
+    currentSize = size;
+
+    document.querySelectorAll('.slide').forEach(slide => { // Update each slide's background image
+      const base = slide.dataset.base; // Get base path from data attribute
+      if (!base) return; // Skip if no base path is defined
+
+      slide.style.backgroundImage = // Set background image based on size
+        `url('${base}-${size}.png')`; // Preset format: base-sm.png, base-md.png, base-lg.png
+    });
+  }
+
+  updateHeroImages(); // Initial call to set images on page load
+  window.addEventListener('resize', updateHeroImages); // Update images on window resize
+
+});
+

@@ -13,7 +13,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: var(--color-card-text);
-}
+} 
 
 .tournament-card:hover {
   transform: translateY(-6px);
@@ -23,7 +23,7 @@
 .tournament-card img {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .tournament-info h3 {
@@ -38,7 +38,7 @@
 
 .tournament-info a,
 .sponsor-link {
-  color: var(--color-card-text);
+  color: var(--color-card-text);  
   font-weight: 600;
   text-decoration: underline;
   transition: color 0.3s ease;
